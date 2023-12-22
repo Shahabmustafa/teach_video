@@ -42,7 +42,9 @@ dependencies:
   firebase_storage: ^11.5.6
   image_picker: ^1.0.5
   uuid: ^4.2.2
-  video_compress: ^3.1.2
+#  video_compress: ^3.1.2
+  video_compress_plus: ^1.0.0
+  video_player: ^2.8.1
 
 dev_dependencies:
   flutter_test:

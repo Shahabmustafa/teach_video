@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:get/get.dart';
+import 'package:video_player/video_player.dart';
 
 import '../../constants.dart';
+import '../../controller/upload_video_contoroller.dart';
 import '../widget/text_input.dart';
 
 class addCaption_Screen extends StatefulWidget {
@@ -20,17 +22,17 @@ class addCaption_Screen extends StatefulWidget {
 }
 
 class _addCaption_ScreenState extends State<addCaption_Screen> {
-  // late VideoPlayerController videoPlayerController;
+  late VideoPlayerController videoPlayerController;
 
-  // VideoUploadController videoUploadController = Get.put(VideoUploadController());
-  TextEditingController songNameController = new TextEditingController();
-  TextEditingController captionController = new TextEditingController();
+  UploadVideoController uploadVideoController = Get.put(UploadVideoController());
+  TextEditingController songNameController = TextEditingController();
+  TextEditingController captionController = TextEditingController();
 
 
-  Widget UploadContent = Text("Upload");
+  Widget UploadContent = const Text("Upload");
 
   uploadVid(){
-    UploadContent = Text("Please Wait..");
+    UploadContent = const Text("Please Wait..");
     setState(() {
 
     });
@@ -41,19 +43,19 @@ class _addCaption_ScreenState extends State<addCaption_Screen> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    // videoPlayerController.dispose();
+    videoPlayerController.dispose();
   }
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    // setState(() {
-    //   videoPlayerController = VideoPlayerController.file(widget.videoFile);
-    // });
-    // videoPlayerController.initialize();
-    // videoPlayerController.play();
-    // videoPlayerController.setLooping(true);
-    // videoPlayerController.setVolume(0.7);
+    setState(() {
+      videoPlayerController = VideoPlayerController.file(widget.videoFile);
+    });
+    videoPlayerController.initialize();
+    videoPlayerController.play();
+    videoPlayerController.setLooping(true);
+    videoPlayerController.setVolume(0.7);
   }
   @override
   Widget build(BuildContext context) {
@@ -64,7 +66,7 @@ class _addCaption_ScreenState extends State<addCaption_Screen> {
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 1.4,
-              // child: VideoPlayer(videoPlayerController),
+              child: VideoPlayer(videoPlayerController),
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20 , vertical: 10),
@@ -73,6 +75,7 @@ class _addCaption_ScreenState extends State<addCaption_Screen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
                   TextInputField(controller: songNameController,
                       icon: Icons.music_note,
                       labelText: "Song Name"),
@@ -81,11 +84,7 @@ class _addCaption_ScreenState extends State<addCaption_Screen> {
                       icon: Icons.closed_caption,
                       labelText: "Caption"),
                   SizedBox(height: 10,),
-                  ElevatedButton(onPressed: (){
-                    uploadVid();
-                    // videoUploadController.uploadVideo(songNameController.text, captionController.text, widget.videoPath);
-
-                  }, child: UploadContent , style: ElevatedButton.styleFrom(primary: buttonColor),)
+                  ElevatedButton(onPressed: (){}, child: Text("Upload") , style: ElevatedButton.styleFrom(primary: buttonColor),)
                 ],
               ),
             )
