@@ -35,27 +35,28 @@ class UploadVideoController extends GetxController{
     try{
       String uid = FirebaseAuth.instance.currentUser!.uid;
 
-      DocumentSnapshot userDoc = await FirebaseFirestore.instance.collection("users").doc(uid).get();
+      DocumentSnapshot userDoc = await FirebaseFirestore.instance.collection("user").doc(uid).get();
       String id = uuid.v1();
       String videoURL = await _uploadVideoToStorage(id,videoPath);
 
       String thumbnail = await _uploadThumbToStorage(id,videoPath);
 
-      print("show ${(userDoc.data()! as Map<String , dynamic>).toString()}");
 
       VideoModel videoModel = VideoModel(
-        uid: uid,
-        id: id,
-        userName: (userDoc.data()! as Map<String,dynamic>)["name"],
-        caption: caption,
-        commentsCount: 0,
-        likes: [],
-        profilePic: (userDoc.data()! as Map<String,dynamic>)["profilePhoto"],
-        shareCount: 0,
-        songName: songName,
-        videoUrl: videoURL,
-        thumbnail: thumbnail,
+          uid: uid,
+          id: id,
+          userName: (userDoc.data()! as Map<String,dynamic>)["name"],
+          caption: caption,
+          commentsCount: 0,
+          likes: [],
+          profilePic: (userDoc.data()! as Map<String,dynamic>)["profilePhoto"],
+          shareCount: 0,
+          songName: songName,
+          videoUrl: videoURL,
+          thumbnail: thumbnail,
       );
+
+      print("videoModel ??????>>>>>>><<>>>>>>??????????????????????$videoModel");
       await FirebaseFirestore.instance.collection("videos").doc(id).set(videoModel.toJson()).then((value){
         Get.snackbar("Date Add", "Your Video Sucessfully Upload");
         Get.back();

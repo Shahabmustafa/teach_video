@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants.dart';
 import 'package:tiktok_clone/view/screen/add_video.dart';
+import 'package:tiktok_clone/view/screen/display_screen.dart';
 import 'package:tiktok_clone/view/widget/custom_icon.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int pageIndex = 0;
 
   List PageIndex = [
-    Text("Home"),
+    DisplayScreen(),
     Text("Home"),
     AddVideo(),
     Text("Home"),

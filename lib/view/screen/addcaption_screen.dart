@@ -84,7 +84,9 @@ class _addCaption_ScreenState extends State<addCaption_Screen> {
                       icon: Icons.closed_caption,
                       labelText: "Caption"),
                   SizedBox(height: 10,),
-                  ElevatedButton(onPressed: (){}, child: Text("Upload") , style: ElevatedButton.styleFrom(primary: buttonColor),)
+                  ElevatedButton(onPressed: (){
+                    uploadVideoController.uploadVideo(songNameController.text, captionController.text, widget.videoPath);
+                  }, child: Text("Upload") , style: ElevatedButton.styleFrom(primary: buttonColor),)
                 ],
               ),
             )
