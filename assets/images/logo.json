@@ -1,0 +1,153 @@
+[{
+  "version": "1.0",
+  "image": {
+    "name": "/home/videosdownloader/public_html/image/public/uploadt/nanotechnology.png",
+    "baseName": "nanotechnology.png",
+    "format": "PNG",
+    "formatDescription": "PNG",
+    "mimeType": "image/png",
+    "class": "DirectClass",
+    "geometry": {
+      "width": 512,
+      "height": 512,
+      "x": 0,
+      "y": 0
+    },
+    "resolution": {
+      "x": 37.8,
+      "y": 37.8
+    },
+    "printSize": {
+      "x": 13.545,
+      "y": 13.545
+    },
+    "units": "PixelsPerCentimeter",
+    "type": "TrueColorAlpha",
+    "baseType": "Undefined",
+    "endianness": "Undefined",
+    "colorspace": "sRGB",
+    "depth": 8,
+    "baseDepth": 8,
+    "channelDepth": {
+      "alpha": 8,
+      "red": 8,
+      "green": 8,
+      "blue": 8
+    },
+    "pixels": 1048576,
+    "imageStatistics": {
+      "Overall": {
+        "min": 0,
+        "max": 255,
+        "mean": 43.1081,
+        "median": 0,
+        "standardDeviation": 19494.1,
+        "kurtosis": 1.37028,
+        "skewness": 1.72024,
+        "entropy": 0.315556
+      }
+    },
+    "channelStatistics": {
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "mean": 61.4718,
+        "median": 0,
+        "standardDeviation": 27684.6,
+        "kurtosis": -0.509858,
+        "skewness": 1.21006,
+        "entropy": 0.153049
+      },
+      "red": {
+        "min": 0,
+        "max": 255,
+        "mean": 21.7729,
+        "median": 0,
+        "standardDeviation": 10673.4,
+        "kurtosis": 1.68476,
+        "skewness": 1.73614,
+        "entropy": 0.36159
+      },
+      "green": {
+        "min": 0,
+        "max": 255,
+        "mean": 29.0253,
+        "median": 0,
+        "standardDeviation": 13368.8,
+        "kurtosis": 0.506178,
+        "skewness": 1.44137,
+        "entropy": 0.362625
+      },
+      "blue": {
+        "min": 0,
+        "max": 255,
+        "mean": 60.1624,
+        "median": 0,
+        "standardDeviation": 26249.8,
+        "kurtosis": -0.73863,
+        "skewness": 1.11584,
+        "entropy": 0.384961
+      }
+    },
+    "alpha": "#00000000",
+    "renderingIntent": "Perceptual",
+    "gamma": 0.454545,
+    "chromaticity": {
+      "redPrimary": {
+        "x": 0.64,
+        "y": 0.33
+      },
+      "greenPrimary": {
+        "x": 0.3,
+        "y": 0.6
+      },
+      "bluePrimary": {
+        "x": 0.15,
+        "y": 0.06
+      },
+      "whitePrimary": {
+        "x": 0.3127,
+        "y": 0.329
+      }
+    },
+    "matteColor": "#BDBDBD",
+    "backgroundColor": "#FFFFFF",
+    "borderColor": "#DFDFDF",
+    "transparentColor": "#00000000",
+    "interlace": "None",
+    "intensity": "Undefined",
+    "compose": "Over",
+    "pageGeometry": {
+      "width": 512,
+      "height": 512,
+      "x": 0,
+      "y": 0
+    },
+    "dispose": "Undefined",
+    "iterations": 0,
+    "compression": "Zip",
+    "orientation": "Undefined",
+    "properties": {
+      "date:create": "2023-12-25T10:03:36+00:00",
+      "date:modify": "2023-12-25T10:03:36+00:00",
+      "png:IHDR.bit-depth-orig": "8",
+      "png:IHDR.bit_depth": "8",
+      "png:IHDR.color-type-orig": "6",
+      "png:IHDR.color_type": "6 (RGBA)",
+      "png:IHDR.interlace_method": "0 (Not interlaced)",
+      "png:IHDR.width,height": "512, 512",
+      "png:pHYs": "x_res=3780, y_res=3780, units=1",
+      "png:sRGB": "intent=0 (Perceptual Intent)",
+      "png:text": "1 tEXt/zTXt/iTXt chunks were found",
+      "signature": "9b49ddcddf7f709e223b08c1929b9ae7390830340b66cf1469a36a9c40eafd90",
+      "Software": "www.inkscape.org"
+    },
+    "tainted": false,
+    "filesize": "49551B",
+    "numberPixels": "262144",
+    "pixelsPerSecond": "20.0291MB",
+    "userTime": "0.020u",
+    "elapsedTime": "0:01.013",
+    "version": "ImageMagick 7.0.10-58 Q16 x86_64 2021-01-14 https://imagemagick.org"
+  }
+}]
