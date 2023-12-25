@@ -19,6 +19,7 @@ class _TeachVideoPlayerState extends State<TeachVideoPlayer> {
     super.initState();
     videoPlayerController = VideoPlayerController.network(widget.videoUrl)..initialize().then((value){
       videoPlayerController.play();
+      videoPlayerController.setLooping(true);
     });
   }
   @override
@@ -29,10 +30,14 @@ class _TeachVideoPlayerState extends State<TeachVideoPlayer> {
   }
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-    return Container(
-      height: size.height,
-      width: size.width,
-      child: VideoPlayer(videoPlayerController),
+    return GestureDetector(
+      onTap: (){
+      },
+      child: Container(
+        height: size.height,
+        width: size.width,
+        child: VideoPlayer(videoPlayerController),
+      ),
     );
   }
 }
