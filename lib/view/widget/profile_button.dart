@@ -13,16 +13,16 @@ class ProfileButton extends StatelessWidget {
           Positioned(
             right: 10,
             child: Container(
-              width: 45,
-              height: 45,
+              width: 50,
+              height: 50,
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(35),
               ),
               child: ClipRRect(
+                borderRadius: BorderRadius.circular(35),
                 child: Image(
-                  image: NetworkImage("https://cdn-icons-png.flaticon.com/128/3135/3135715.png"),
-                  // image: NetworkImage(profileImageUrl),
+                  image: NetworkImage(profileImageUrl.toString()),
                   fit: BoxFit.cover,
                 ),
               ),
